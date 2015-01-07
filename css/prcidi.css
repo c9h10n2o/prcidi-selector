@@ -1,0 +1,120 @@
+/* Common Styles */
+
+.clearfix:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	content: ".";
+}
+.clearfix {
+	display: inline-block;
+	
+	_height: 1px;
+	zoom: 1;
+}
+*html .clearfix {
+	height: 1%;
+}
+*+html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+
+/* Control Styles */
+
+.prcidi-ctrl {
+	font-size: 12px;
+}
+.prcidi-selector {
+	position: relative;
+	z-index: 10;
+	display: inline-block;
+	min-width: 12em;
+	padding: 8px 20px 8px 8px;
+	background: #fff url(../images/icon-dropdown.gif) no-repeat 95%;
+	border: 1px solid #dedede;
+	border-radius: 2px;
+	cursor: pointer;
+
+	_width: 12em;
+}
+.prcidi-selector.active {
+	background-color: #f8f8f8;
+	border-bottom-color: #f8f8f8;
+	box-shadow: 1px -2px 2px rgba(0,0,0,0.1);
+}
+.prcidi-dropdown {
+	width: 445px;
+	padding-top: 8px;
+	border: 1px solid #dedede;
+	border-radius: 2px;
+	background: #f8f8f8;
+	margin-top: -1px;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+}
+.prcidi-dropdown .level-tabbar {
+	margin-left: 8px;
+}
+.prcidi-dropdown .level-tabbar li {
+	float: left;
+	position: relative;
+	z-index: 10;
+	padding: 8px 20px 8px 8px;
+	background: #fff url(../images/icon-dropdown.gif) no-repeat 93%;
+	border: 1px solid #dedede;
+	border-radius: 2px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.prcidi-dropdown .level-tabbar li.disabled {
+	background-color: #efefef;
+	border-color: #dcdcdc;
+	color: #000;
+	opacity: .6;
+	cursor: default;
+
+	filter: alpha(opacity=70);
+}
+.prcidi-dropdown .level-tabbar li.active {
+	z-index: 30;
+	border-bottom-color: #fff;
+}
+.prcidi-dropdown .level-body {
+	clear: both;
+	position: relative;
+	z-index: 20;
+	top: -1px;
+	min-height: 10em;
+	padding: 8px;
+	background: #fff;
+	border-top: 1px solid #dedede;
+	box-shadow: 1px -2px 2px rgba(0,0,0,0.1);
+
+	_height: 10em; 
+}
+.prcidi-dropdown .level-body.loading {
+	background-image: url(../images/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.prcidi-dropdown .level-body li {
+	float: left;
+	width: 5em;
+	overflow: hidden;
+	padding: 0 6px;
+	margin: 2px 6px;
+	line-height: 2;
+	/*letter-spacing: .1em;*/
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.prcidi-dropdown .level-body li.active,
+.prcidi-dropdown .level-body li.hover {
+	background: #f75932;
+	border-radius: 1em;
+	color: #fff;
+}

@@ -1,0 +1,14 @@
+{
+    data: [
+        { name: '浙江省', value: 'zhejiang' }
+    ,   { name: '江苏省', value: 'jiangsu' }
+    ,   { name: '上海市', value: 'shanghai' }
+    ,   { name: '安徽省', value: 'anhui' }
+    ,   { name: '西藏自治区', value: 'tibet' }
+    ,   { name: '新疆自治区', value: 'xinjiang' }
+    ,   { name: '香港特区', value: 'hongkong' }
+    ,   { name: '北京市', value: 'beijing' }
+    ,   { name: '澳门特区', value: 'macao' }
+    ,   { name: '台湾国', value: 'taiwan' }
+    ]
+}

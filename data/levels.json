@@ -1,0 +1,44 @@
+{
+    data: [
+        { name: '浙江省', value: 'zhejiang' }
+    ,   { name: '江苏省', value: 'jiangsu' }
+    ,   { name: '上海市', value: 'shanghai' }
+    ,   { name: '安徽省', value: 'anhui' }
+    ,   { name: '西藏自治区', value: 'tibet' }
+    ,   { name: '新疆自治区', value: 'xinjiang' }
+    ,   { name: '香港特区', value: 'hongkong' }
+    ,   { name: '北京市', value: 'beijing' }
+    ,   { name: '澳门特区', value: 'macao' }
+    ,   { name: '台湾国', value: 'taiwan' }
+    ,   { name: '南京市', value: 'nanjing' }
+    ,   { name: '杭州市', value: 'hangzhou' }
+    ,   { name: '蚌埠市', value: 'bengbu' }
+    ,   { name: '拉萨市', value: 'lasa' }
+    ,   { name: '湖州市', value: 'huzhou' }
+    ,   { name: '景德镇市', value: 'jingdezhen' }
+    ,   { name: '阿拉善右旗', value: 'alashanyouqi' }
+    ,   { name: '阿拉善左旗', value: 'alashanzuoqi' }
+    ,   { name: '镇江市', value: 'zhenjiang' }
+    ,   { name: '丹阳市', value: 'danyang' }
+    ,   { name: '滁州市', value: 'chuzhou' }
+    ,   { name: '舟山市', value: 'zhoushan' }
+    ,   { name: '聂拉木县', value: 'nielamu' }
+    ,   { name: '樟木镇', value: 'zhangmu' }
+    ,   { name: '玄武区', value: 'xuanwu' }
+    ,   { name: '白下区', value: 'baixia' }
+    ,   { name: '浦口区', value: 'pukou' }
+    ,   { name: '鼓楼区', value: 'gulou' }
+    ,   { name: '西湖区', value: 'xihu' }
+    ,   { name: '上城区', value: 'shangcheng' }
+    ,   { name: '下城区', value: 'xiacheng' }
+    ,   { name: '拱墅区', value: 'gongshu' }
+    ,   { name: '滨江区', value: 'binjiang' }
+    ,   { name: '巴丹吉林', value: 'badanjilin' }
+    ,   { name: '高淳县', value: 'gaochun' }
+    ,   { name: '溧水县', value: 'lishui' }
+    ,   { name: '荻港村', value: 'digangcun' }
+    ,   { name: '嵊泗县', value: 'shengsi' }
+    ,   { name: '枸杞岛', value: 'gouqidao' }
+    ,   { name: '东极岛', value: 'dongjidao' }
+    ]
+}
