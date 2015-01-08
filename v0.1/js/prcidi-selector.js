@@ -1,5 +1,6 @@
 /* *
  * PrCiDiSelector Control
+ * Version 0.1.150107
  * jQuery 1.4.2 Tested
  * Project Home: http://github.com/c9h10n2o/prcidi-selector
  * Any donation would be appreciated! :)

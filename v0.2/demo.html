@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>PrCiDiSelector Control Demo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/prcidi.css">
+</head>
+<body style="margin:20px; font-size:12px">
+<div style="float:right">
+	&copy; 2014 寒塘渡月 <a href="http://sometime.me" target="_blank">sometime.me</a>
+</div>
+<h1 style="font: bold 20px Helvetica">PrCiDiSelector Control Demo</h1>
+<hr/><br/>
+
+地区：
+<input type="text" name="area" id="area" readonly>
+
+<script src="js/jquery-1.4.2.js" type="text/javascript"></script>
+<script src="js/prcidi-selector.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	var myPrCiDiSelector = new PrCiDiSelector({
+			uiField: '#area'
+			// default: null
+			// Data type: Selector string | DOM node | jQuery object
+		,	placeHolderSelector: '请选择'		// default
+		,	placeHolderLevel: '请选择'		// default
+		,	preset: {
+				name: '浙江省杭州市西湖区'		// default: ''
+			,	value: 'zhejiang-hangzhou-xihu'		// default: ''
+			}
+
+		,	level: 2	// default
+	    ,   levelTypes: '省|市|区/县'		// default
+
+		,	apiPattern: [		// default: ''
+				'data/level0.json?level=%LEVEL%&value=%VALUE%'
+			,	'data/level1.json?level=%LEVEL%&value=%VALUE%'
+			,	'data/level2.json?level=%LEVEL%&value=%VALUE%'
+			]
+// 		,	apiPattern: 'data/levels.json?level=%LEVEL%&value=%VALUE%'		// default: ''
+		,	extraData: {		// default: null
+				prodId: 916
+			}
+		});
+
+	$('#area').bind('change', function(){ console.log(this.value) });
+</script>
+
+</body>
+</html>

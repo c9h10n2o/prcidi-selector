@@ -1,0 +1,16 @@
+{
+    data: [
+        { name: '南京市', value: 'nanjing' }
+    ,   { name: '杭州市', value: 'hangzhou' }
+    ,   { name: '蚌埠市', value: 'bengbu' }
+    ,   { name: '拉萨市', value: 'lasa' }
+    ,   { name: '湖州市', value: 'huzhou' }
+    ,   { name: '景德镇市', value: 'jingdezhen' }
+    ,   { name: '阿拉善右旗', value: 'alashanyouqi' }
+    ,   { name: '阿拉善左旗', value: 'alashanzuoqi' }
+    ,   { name: '镇江市', value: 'zhenjiang' }
+    ,   { name: '丹阳市', value: 'danyang' }
+    ,   { name: '滁州市', value: 'chuzhou' }
+    ,   { name: '舟山市', value: 'zhoushan' }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    data: [
+        { name: '聂拉木县', value: 'nielamu' }
+    ,   { name: '樟木镇', value: 'zhangmu' }
+    ,   { name: '玄武区', value: 'xuanwu' }
+    ,   { name: '白下区', value: 'baixia' }
+    ,   { name: '浦口区', value: 'pukou' }
+    ,   { name: '鼓楼区', value: 'gulou' }
+    ,   { name: '西湖区', value: 'xihu' }
+    ,   { name: '上城区', value: 'shangcheng' }
+    ,   { name: '下城区', value: 'xiacheng' }
+    ,   { name: '拱墅区', value: 'gongshu' }
+    ,   { name: '滨江区', value: 'binjiang' }
+    ,   { name: '巴丹吉林', value: 'badanjilin' }
+    ,   { name: '高淳县', value: 'gaochun' }
+    ,   { name: '溧水县', value: 'lishui' }
+    ,   { name: '荻港村', value: 'digangcun' }
+    ,   { name: '嵊泗县', value: 'shengsi' }
+    ,   { name: '枸杞岛', value: 'gouqidao' }
+    ,   { name: '东极岛', value: 'dongjidao' }
+    ]
+}
