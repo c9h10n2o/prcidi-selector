@@ -226,12 +226,6 @@ PrCiDiSelector.prototype = {
             $uiLevelBody.html('');
             $.grep(data.data, function(k) {
                 var $uiLi = $('<li>')
-                ,   isMunicipality = $.inArray(k.name, opt.municipalities) >= 0;
-
-                !level && isMunicipality &&
-                    $uiLi.attr('data-municipality', isMunicipality);
-                
-                $uiLi
                     .text(k.name)
                     .attr('data-value', k.value)
                     .appendTo($uiLevelBody);
