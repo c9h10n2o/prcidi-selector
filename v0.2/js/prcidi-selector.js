@@ -92,7 +92,6 @@ PrCiDiSelector.prototype = {
 
         this.$uiDropdown = $('<div>')
             .addClass('prcidi-dropdown prcidi-ctrl')
-            .css('position', 'absolute')
             .hide()
             .appendTo('body');
 
@@ -184,24 +183,6 @@ PrCiDiSelector.prototype = {
 
                 $uiLevelBody.show();
             });
-
-        $('.prcidi-dropdown .level-body li')
-            .live('mouseenter', function() { $(this).addClass('hover') })
-            .live('mouseleave', function() { $(this).removeClass('hover') })
-            .live('click', function() {
-                var level = $(this).parent().attr('data-level') / 1
-                ,   name = $(this).text()
-                ,   value = $(this).attr('data-value')
-                ,   isOnlyOneItem = !$(this).siblings().length;
-
-                $(this)
-                    .addClass('active')
-                    .siblings()
-                    .removeClass('active');
-
-                level < opt.level && that.clearLevel(level + 1);
-                that.setLevel(level, name, value, isOnlyOneItem);
-            });
     }
 
     // Load data for specific level
@@ -228,7 +209,23 @@ PrCiDiSelector.prototype = {
                 var $uiLi = $('<li>')
                     .text(k.name)
                     .attr('data-value', k.value)
-                    .appendTo($uiLevelBody);
+                    .appendTo($uiLevelBody)
+                    .mouseenter(function() { $(this).addClass('hover') })
+                    .mouseleave(function() { $(this).removeClass('hover') })
+                    .click(function() {
+                        var level = $(this).parent().attr('data-level') / 1
+                        ,   name = $(this).text()
+                        ,   value = $(this).attr('data-value')
+                        ,   isOnlyOneItem = !$(this).siblings().length;
+
+                        $(this)
+                            .addClass('active')
+                            .siblings()
+                            .removeClass('active');
+
+                        level < opt.level && that.clearLevel(level + 1);
+                        that.setLevel(level, name, value, isOnlyOneItem);
+                    });
 
                 !data.data[1] && $uiLi.trigger('click');
             });
