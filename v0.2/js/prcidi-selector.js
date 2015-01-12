@@ -1,6 +1,6 @@
 /* *
  * PrCiDiSelector Control
- * Version 0.2.150108
+ * Version 0.2.150112
  * jQuery 1.4.2 Tested
  * Project Home: http://github.com/c9h10n2o/prcidi-selector
  * Any donation would be appreciated! :)
@@ -40,7 +40,8 @@ PrCiDiSelector.prototype = {
 ,   $uiSelector: null
 ,   $uiDropdown: null
 ,   $uiLevelTabbar: null
-,   $uiLevelBodies: []
+// ,   $uiLevelBodies: []
+// Array in prototype will be shared
 
 ,   result: {
         name: []
@@ -60,6 +61,8 @@ PrCiDiSelector.prototype = {
 
         if(!opt.levelTypes.pop)
             opt.levelTypes = opt.levelTypes.split('|');
+
+        this.$uiLevelBodies = [];
 
         this.createSelector();
         this.createDropdown();
@@ -130,10 +133,10 @@ PrCiDiSelector.prototype = {
         ,   opt = this.options;
 
         this.$uiSelector
-            .bind('click', function() {
+            .bind('click', function(e, isInternal) {
                 that.snapDropdown()
                     .toggle(200);
-                //     .fadeToggle(200);
+                //  .fadeToggle(200);
                 $(this).toggleClass('active');
 
                 if($(this).hasClass('active')) {
@@ -143,18 +146,23 @@ PrCiDiSelector.prototype = {
 
                     that.loadLevel(0);                
                 }
+
+                isInternal && e.stopPropagation();
             })
 
         $(document).bind('click', function(e) {
-            var $uiTarget = $(e.target);
+            var _uiTarget = e.target
+            ,   $uiTarget = $(_uiTarget)
+            ,   _uiSelector = that.$uiSelector[0]
+            ,   _uiDropdown = that.$uiDropdown[0];
 
-            !$uiTarget.hasClass('prcidi-selector') &&
-            !$uiTarget.hasClass('prcidi-dropdown') &&
-            !$uiTarget.parents('.prcidi-selector')[0] &&
-            !$uiTarget.parents('.prcidi-dropdown')[0] &&
+            _uiTarget != _uiSelector &&
+            _uiTarget != _uiDropdown &&
+            $uiTarget.parents('.prcidi-selector')[0] != _uiSelector &&
+            $uiTarget.parents('.prcidi-dropdown')[0] != _uiDropdown &&
             that.$uiSelector
                 .filter('.active')
-                .trigger('click');
+                .trigger('click', true);
         });
 
         this.$uiLevelTabbar
